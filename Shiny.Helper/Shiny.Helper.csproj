@@ -8,23 +8,24 @@
 		<Authors>huguodong</Authors>
 		<Company>Shiny</Company>
 		<PackageIcon>图标.jpg</PackageIcon>
-		<Description>帮助类,包括字符串处理，json处理，文件处理等
-教程：https://www.cnblogs.com/huguodong/p/16400206.html
+		<Description>
+			帮助类,包括字符串处理，json处理，文件处理等
+			教程：https://www.cnblogs.com/huguodong/p/16400206.html
 		</Description>
 		<PackageProjectUrl>https://www.cnblogs.com/huguodong/p/16400206.html</PackageProjectUrl>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\图标.jpg">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <None Update="图标.jpg">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
