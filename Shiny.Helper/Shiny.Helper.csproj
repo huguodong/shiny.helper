@@ -4,17 +4,24 @@
 		<TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<Authors>huguodong</Authors>
 		<Company>Shiny</Company>
-		<PackageIcon>图标.jpg</PackageIcon>
-		<Description>
-			帮助类,包括字符串处理，json处理，文件处理等
-			教程：https://www.cnblogs.com/huguodong/p/16400206.html
+		<Description>帮助类,包括字符串处理，json处理，文件处理等
+教程：https://www.cnblogs.com/huguodong/p/16400206.html
 		</Description>
 		<PackageProjectUrl>https://www.cnblogs.com/huguodong/p/16400206.html</PackageProjectUrl>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackageIcon>图标.jpg</PackageIcon>
+
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\图标.jpg">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
@@ -27,5 +34,6 @@
 	    <PackagePath>\</PackagePath>
 	  </None>
 	</ItemGroup>
+
 
 </Project>
