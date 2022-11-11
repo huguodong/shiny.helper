@@ -323,19 +323,6 @@ namespace Shiny.Helper
         #endregion
 
         #region 时间
-        /// <summary>  
-        /// 将c# DateTime时间格式转换为Unix时间戳格式  
-        /// </summary>  
-        /// <param name="time">时间</param>  
-        /// <returns>long</returns>  
-        public static long ConvertDateTimeToLong(this DateTime time)
-        {
-#pragma warning disable CS0618 // 类型或成员已过时
-            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1)); // 当地时区
-#pragma warning restore CS0618 // 类型或成员已过时
-            return (long)(time - startTime).TotalSeconds; // 相差秒数
-
-        }
 
         public static int ConvertDateTimeToInt(this DateTime time)
         {
@@ -346,21 +333,7 @@ namespace Shiny.Helper
 
         }
 
-        /// <summary>
-        /// 将c# Unix时间戳格式转换为DateTime时间格式
-        /// </summary>
-        /// <param name="TimeStamp"></param>
-        /// <param name="isMinSeconds"></param>
-        /// <returns></returns>
-        public static DateTime StampToDatetime(this long TimeStamp, bool isMinSeconds = false)
-        {
-            var startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));//当地时区
-                                                                                           //返回转换后的日期
-            if (isMinSeconds)
-                return startTime.AddMilliseconds(TimeStamp);
-            else
-                return startTime.AddSeconds(TimeStamp);
-        }
+
         #endregion
 
 

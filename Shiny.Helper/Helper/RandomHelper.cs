@@ -118,6 +118,22 @@ namespace Shiny.Helper
         }
 
         /// <summary>
+        /// 生成指定长度的随机数字字符串
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string CreateNum(int length = 1)
+        {
+            Random random = new Random(Guid.NewGuid().GetHashCode());
+            var result = "";
+            for (int i = 0; i < length; i++)
+            {
+                result += random.Next(10);
+            }
+            return result;
+        }
+
+        /// <summary>
         /// 生成单个大写随机字母
         /// </summary>
         public static string CreateBigAbc()
